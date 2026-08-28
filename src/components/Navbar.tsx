@@ -1,16 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { 
   FileText, 
   Printer, 
   PlusCircle, 
   Sparkles, 
-  Download, 
-  Upload, 
   ChevronDown
 } from 'lucide-react';
 import type { InvoiceData } from '../types/invoice';
 import { sampleTemplates, emptyInvoice } from '../utils/sampleData';
-import { exportInvoiceToJson } from '../utils/storage';
 import confetti from 'canvas-confetti';
 
 interface NavbarProps {
@@ -27,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   setActiveTab,
 }) => {
   const [templateDropdownOpen, setTemplateDropdownOpen] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handlePrint = () => {
     try {
@@ -62,28 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
-  const handleImportJson = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      try {
-        const parsed = JSON.parse(event.target?.result as string);
-        if (parsed && parsed.items && Array.isArray(parsed.items)) {
-          onUpdateInvoice(parsed);
-          alert('Invoice loaded successfully!');
-        } else {
-          alert('Invalid invoice JSON format.');
-        }
-      } catch {
-        alert('Failed to parse JSON file.');
-      }
-    };
-    reader.readAsText(file);
-    // Reset file input value
-    e.target.value = '';
-  };
 
   return (
     <header className="navbar no-print">
@@ -164,34 +139,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>New</span>
           </button>
 
-          {/* Export JSON */}
-          <button
-            id="export-json-btn"
-            className="btn btn-subtle"
-            onClick={() => exportInvoiceToJson(invoice)}
-            title="Export invoice data as JSON"
-          >
-            <Download size={16} />
-            <span className="hide-on-mobile-tab">Export</span>
-          </button>
-
-          {/* Import JSON */}
-          <button
-            id="import-json-btn"
-            className="btn btn-subtle"
-            onClick={() => fileInputRef.current?.click()}
-            title="Import invoice JSON file"
-          >
-            <Upload size={16} />
-            <span className="hide-on-mobile-tab">Import</span>
-          </button>
-          <input
-            type="file"
-            ref={fileInputRef}
-            style={{ display: 'none' }}
-            accept=".json,application/json"
-            onChange={handleImportJson}
-          />
 
           {/* Primary Action: Print / PDF */}
           <button
