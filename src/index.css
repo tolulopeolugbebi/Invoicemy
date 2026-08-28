@@ -1021,6 +1021,16 @@ button {
     width: 100% !important;
   }
 
+  /* Print always the full invoice preview, even when the mobile
+     tab toggling hides it on screen (e.g. when the Editor tab is active).
+     The print viewport (A4) is narrower than 1080px, which would
+     otherwise trigger .hide-on-mobile-tab { display: none }. */
+  .editor-column,
+  .preview-column,
+  .hide-on-mobile-tab {
+    display: block !important;
+  }
+
   .invoice-paper-wrapper {
     padding: 0 !important;
     overflow: visible !important;
@@ -1034,6 +1044,31 @@ button {
     min-height: auto !important;
     width: 100% !important;
     page-break-after: avoid;
+  }
+
+  /* The print viewport (A4 portrait) is narrower than 768px, so the
+     responsive mobile rules would otherwise collapse the invoice into
+     the stacked layout. Restore the original desktop invoice layout. */
+  .paper-header {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+  }
+
+  .paper-invoice-info {
+    text-align: right !important;
+  }
+
+  .paper-meta-table {
+    text-align: right !important;
+  }
+
+  .paper-meta-row {
+    justify-content: flex-end !important;
+  }
+
+  .paper-parties {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
   }
 
   .paper-accent-bar {

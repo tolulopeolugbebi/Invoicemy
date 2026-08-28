@@ -15,3 +15,5 @@ I decided to remove the Import and Export buttons and keep only the Print / PDF 
 Phase 4: During testing, I identified several visual inconsistencies in the invoice layout. The business name appeared too large, the padding around the invoice was inconsistent, and the Subtotal and Payment Instructions were positioned side by side. I refined these areas to improve visual hierarchy and spacing while keeping the existing UI design unchanged.
 
 Phase 5: During testing, I found a TypeScript error caused by an unused invoice prop in the Navbar component. I removed the unused prop and confirmed that the build passed successfully after the fix.
+
+Phase 6: During testing, I noticed that the invoice PDF was downloading as a blank document. I investigated the PDF generation functionality and fixed the issue so the generated PDF now displays the invoice information correctly.
