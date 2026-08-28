@@ -17,3 +17,5 @@ Phase 4: During testing, I identified several visual inconsistencies in the invo
 Phase 5: During testing, I found a TypeScript error caused by an unused invoice prop in the Navbar component. I removed the unused prop and confirmed that the build passed successfully after the fix.
 
 Phase 6: During testing, I noticed that the invoice PDF was downloading as a blank document. I investigated the PDF generation functionality and fixed the issue so the generated PDF now displays the invoice information correctly.
+
+Phase 7: During testing, I noticed that the template options were based on job details rather than different invoice designs. I changed the template selector to provide three visual design options and made sure each option changes the invoice preview.

@@ -89,7 +89,7 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
       <div className="invoice-paper-wrapper">
         <div 
           id="invoice-paper-document" 
-          className="invoice-paper"
+          className={`invoice-paper template-${invoice.templateStyle || 'minimal'}`}
           style={{ '--primary': invoice.themeColor } as React.CSSProperties}
         >
           {/* Top Decorative Accent Bar */}

@@ -624,6 +624,177 @@ button {
   background: var(--primary);
 }
 
+/* =========================================================
+   Invoice Design Templates
+   ========================================================= */
+
+/* -- Template: Clean & Minimal -- */
+.invoice-paper.template-minimal {
+  background: #ffffff;
+}
+.template-minimal .paper-accent-bar {
+  display: none;
+}
+.template-minimal .paper-company-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #0f172a;
+}
+.template-minimal .paper-invoice-title {
+  font-family: var(--font-sans);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.template-minimal .paper-invoice-info {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.9rem;
+}
+.template-minimal .paper-parties {
+  border-top: 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.template-minimal .paper-items-table th {
+  background: transparent;
+  color: #64748b;
+  border-bottom: 2px solid #e2e8f0;
+}
+.template-minimal .paper-items-table td {
+  border-bottom: 1px solid #f1f5f9;
+}
+.template-minimal .paper-summary-block {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+.template-minimal .paper-summary-total {
+  border-top: 2px solid #0f172a;
+}
+
+/* -- Template: Modern & Bold -- */
+.invoice-paper.template-modern {
+  background: #ffffff;
+}
+.template-modern .paper-accent-bar {
+  display: none;
+}
+.template-modern .paper-header {
+  background: var(--primary);
+  color: #ffffff;
+  margin: -2.5rem -2.5rem 2rem -2.5rem;
+  padding: 2.5rem;
+}
+.template-modern .paper-company-name {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.template-modern .paper-company-meta {
+  color: rgba(255, 255, 255, 0.85);
+}
+.template-modern .paper-invoice-title {
+  color: #ffffff;
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+.template-modern .paper-invoice-number {
+  color: rgba(255, 255, 255, 0.9);
+}
+.template-modern .paper-meta-label,
+.template-modern .paper-meta-val {
+  color: #ffffff;
+}
+.template-modern .paper-parties {
+  border-top: 0;
+}
+.template-modern .paper-items-table th {
+  background: var(--primary);
+  color: #ffffff;
+  border-bottom: 0;
+}
+.template-modern .paper-summary-block {
+  background: var(--primary-light);
+  border: 2px solid var(--primary);
+}
+.template-modern .paper-total-amount {
+  font-size: 1.5rem;
+}
+
+/* -- Template: Classic & Professional -- */
+.invoice-paper.template-classic {
+  background: #ffffff;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+.template-classic .paper-accent-bar {
+  display: none;
+}
+.template-classic .paper-header {
+  border-bottom: 3px double #334155;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.template-classic .paper-company-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #1e293b;
+  text-transform: uppercase;
+}
+.template-classic .paper-company-meta {
+  font-family: var(--font-sans);
+  color: #6b7280;
+}
+.template-classic .paper-invoice-info {
+  text-align: right;
+}
+.template-classic .paper-invoice-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1e293b;
+}
+.template-classic .paper-invoice-number {
+  font-family: var(--font-sans);
+}
+.template-classic .paper-meta-label {
+  color: #6b7280;
+}
+.template-classic .paper-parties {
+  border: 1px solid #cbd5e1;
+  border-left: 0;
+  border-right: 0;
+  padding: 1.25rem 0;
+}
+.template-classic .party-title {
+  color: #6b7280;
+}
+.template-classic .paper-items-table th {
+  background: #ffffff;
+  color: #1e293b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  border-bottom: 2px solid #334155;
+}
+.template-classic .paper-items-table td {
+  border-bottom: 1px solid #e2e8f0;
+}
+.template-classic .paper-summary-block {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: 3px double #334155;
+}
+.template-classic .paper-note-section-title,
+.template-classic .paper-footer {
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 0.08em;
+}
+
 .paper-header {
   display: flex;
   justify-content: space-between;
