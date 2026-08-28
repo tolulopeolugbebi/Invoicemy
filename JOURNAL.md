@@ -19,3 +19,6 @@ Phase 5: During testing, I found a TypeScript error caused by an unused invoice 
 Phase 6: During testing, I noticed that the invoice PDF was downloading as a blank document. I investigated the PDF generation functionality and fixed the issue so the generated PDF now displays the invoice information correctly.
 
 Phase 7: During testing, I noticed that the template options were based on job details rather than different invoice designs. I changed the template selector to provide three visual design options and made sure each option changes the invoice preview.
+
+Phase 8: During testing, I identified several issues with the invoice layout and mobile experience. I fixed the PDF padding so it matches the invoice preview, improved the responsiveness of the web app on mobile, and kept the invoice preview in its original document format for consistent PDF output.
+I also removed the unnecessary website information from the business details, improved the spacing and alignment between the Billed To and Payment Due sections, and removed the duplicate Print/PDF button from the invoice preview while keeping it in the navbar.

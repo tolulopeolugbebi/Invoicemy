@@ -881,10 +881,15 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  column-gap: 3rem;
   padding: 1.25rem 0;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
   margin-bottom: 2rem;
+}
+
+.paper-parties > div:last-child {
+  text-align: right;
 }
 
 .party-title {
@@ -1120,6 +1125,9 @@ button {
 }
 
 @media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .navbar-content {
     flex-direction: column;
     align-items: stretch;
@@ -1133,29 +1141,17 @@ button {
   .form-group.col-span-2, .form-group.col-span-3, .form-group.col-span-4 {
     grid-column: span 1;
   }
-  .paper-header {
-    flex-direction: column;
-    gap: 1.25rem;
+  .invoice-paper-wrapper {
+    overflow-x: auto;
   }
-  .paper-invoice-info {
-    text-align: left;
+  .preview-column {
+    min-width: 0;
   }
-  .paper-meta-table {
-    text-align: left;
-  }
-  .paper-meta-row {
-    justify-content: flex-start;
-  }
-  .paper-parties {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-  .paper-bottom-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .preview-panel {
+    min-width: 0;
   }
   .invoice-paper {
-    padding: 1.5rem 1.25rem;
+    min-width: 720px;
   }
 }
 
@@ -1211,8 +1207,9 @@ button {
     box-shadow: none !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 0.5in 0.5in !important;
+    padding: 2.5rem !important;
     min-height: auto !important;
+    min-width: 0 !important;
     width: 100% !important;
     page-break-after: avoid;
   }
@@ -1240,6 +1237,7 @@ button {
   .paper-parties {
     grid-template-columns: 1fr 1fr !important;
     gap: 2rem !important;
+    column-gap: 3rem !important;
   }
 
   .paper-accent-bar {
@@ -1266,6 +1264,6 @@ button {
 
   @page {
     size: A4 portrait;
-    margin: 0.5in;
+    margin: 0;
   }
 }

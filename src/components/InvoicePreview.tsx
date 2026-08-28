@@ -2,8 +2,7 @@ import React from 'react';
 import type { InvoiceData } from '../types/invoice';
 import { calculateInvoiceTotals, calculateLineItemTotal } from '../utils/calculations';
 import { formatCurrency } from '../utils/currencies';
-import { Palette, Printer } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { Palette } from 'lucide-react';
 
 interface InvoicePreviewProps {
   invoice: InvoiceData;
@@ -24,21 +23,6 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
   onUpdateThemeColor,
 }) => {
   const totals = calculateInvoiceTotals(invoice);
-
-  const handlePrint = () => {
-    try {
-      confetti({
-        particleCount: 40,
-        spread: 60,
-        origin: { y: 0.2 },
-      });
-    } catch {
-      // Confetti fallback
-    }
-    setTimeout(() => {
-      window.print();
-    }, 150);
-  };
 
   const getStatusBadgeClass = (status: string) => {
     switch (status) {
@@ -73,16 +57,6 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
             ))}
           </div>
         </div>
-
-        <button
-          type="button"
-          className="btn btn-secondary btn-sm"
-          onClick={handlePrint}
-          title="Print or save as PDF"
-        >
-          <Printer size={14} />
-          <span>Print / PDF</span>
-        </button>
       </div>
 
       {/* Printable Invoice Paper Sheet */}
@@ -120,7 +94,6 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
                   </div>
                 )}
                 {invoice.business.taxId && <div>Tax ID: {invoice.business.taxId}</div>}
-                {invoice.business.website && <div>{invoice.business.website}</div>}
               </div>
             </div>
 
