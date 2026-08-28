@@ -1,4 +1,4 @@
-export type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'CAD' | 'AUD' | 'JPY' | 'INR' | 'CHF' | 'SGD' | 'NZD' | 'BRL';
+export type CurrencyCode = 'USD' | 'EUR' | 'GBP' | 'CAD' | 'AUD' | 'JPY' | 'INR' | 'CHF' | 'SGD' | 'NZD' | 'BRL' | 'NGN';
 
 export interface CurrencyConfig {
   code: CurrencyCode;

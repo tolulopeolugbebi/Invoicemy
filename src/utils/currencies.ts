@@ -12,6 +12,7 @@ export const CURRENCIES: Record<CurrencyCode, CurrencyConfig> = {
   SGD: { code: 'SGD', symbol: 'SG$', name: 'Singapore Dollar (SG$)', position: 'prefix' },
   NZD: { code: 'NZD', symbol: 'NZ$', name: 'New Zealand Dollar (NZ$)', position: 'prefix' },
   BRL: { code: 'BRL', symbol: 'R$ ', name: 'Brazilian Real (R$)', position: 'prefix' },
+  NGN: { code: 'NGN', symbol: '₦', name: 'Nigerian Naira (₦)', position: 'prefix' },
 };
 
 export const formatCurrency = (amount: number, currencyCode: CurrencyCode = 'USD'): string => {
