@@ -1,6 +1,6 @@
-Invoicely Development Journal
+Invoicemy Development Journal
 Phase 1: Project Setup
-I decided to build a simple invoice generator called Invoicely for freelancers and small businesses.
+I decided to build a simple invoice generator called Invoicemy for freelancers and small businesses.
 The goal is to make it easy for users to create professional invoices by entering their business details, client information and invoice items.
 I chose React, TypeScript, Vite and CSS to build the application as a responsive web app.
 The initial version focuses on the core invoice creation experience, including adding invoice details, adding invoice items, calculating totals and displaying a live invoice preview.
@@ -13,3 +13,5 @@ Phase 3: During testing, I noticed that the invoice interface included Import an
 I decided to remove the Import and Export buttons and keep only the Print / PDF action. This keeps the invoice actions focused on the main purpose of the application without changing the overall UI design.
 
 Phase 4: During testing, I identified several visual inconsistencies in the invoice layout. The business name appeared too large, the padding around the invoice was inconsistent, and the Subtotal and Payment Instructions were positioned side by side. I refined these areas to improve visual hierarchy and spacing while keeping the existing UI design unchanged.
+
+Phase 5: During testing, I found a TypeScript error caused by an unused invoice prop in the Navbar component. I removed the unused prop and confirmed that the build passed successfully after the fix.

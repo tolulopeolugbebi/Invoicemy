@@ -18,7 +18,6 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  invoice,
   onUpdateInvoice,
   activeTab,
   setActiveTab,

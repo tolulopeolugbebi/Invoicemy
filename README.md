@@ -1,10 +1,10 @@
-# Invoicely
+# Invoicemy
 
 A simple invoice generator designed to help freelancers and small businesses create professional invoices quickly and easily.
 
 ## Project Overview
 
-Invoicely allows users to enter their business details, client information and invoice items, while automatically calculating invoice totals and displaying a live invoice preview.
+Invoicemy allows users to enter their business details, client information and invoice items, while automatically calculating invoice totals and displaying a live invoice preview.
 
 The project was created as part of a weekly Ship Log development task.
 
