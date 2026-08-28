@@ -7,3 +7,9 @@ The initial version focuses on the core invoice creation experience, including a
 I used Antigravity to help develop the application from the initial prompt.
 After the first version was created, I tested the application and identified several areas that needed improvement. I will document these issues and the solutions as development continues.
 Phase 2: During testing, I noticed that Nigerian Naira was missing from the currency selector. I added NGN and the ₦ symbol and tested the currency across the invoice calculations.
+
+Phase 3: During testing, I noticed that the invoice interface included Import and Export buttons alongside the Print / PDF option. These actions were not part of the core functionality required for the application.
+
+I decided to remove the Import and Export buttons and keep only the Print / PDF action. This keeps the invoice actions focused on the main purpose of the application without changing the overall UI design.
+
+Phase 4: During testing, I identified several visual inconsistencies in the invoice layout. The business name appeared too large, the padding around the invoice was inconsistent, and the Subtotal and Payment Instructions were positioned side by side. I refined these areas to improve visual hierarchy and spacing while keeping the existing UI design unchanged.

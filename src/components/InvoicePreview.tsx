@@ -232,22 +232,6 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
 
           {/* Bottom Grid: Notes & Summary */}
           <div className="paper-bottom-grid">
-            <div className="paper-notes-block">
-              {invoice.paymentInstructions && (
-                <div>
-                  <div className="paper-note-section-title">Payment Instructions</div>
-                  <div className="paper-note-text">{invoice.paymentInstructions}</div>
-                </div>
-              )}
-
-              {invoice.notes && (
-                <div>
-                  <div className="paper-note-section-title">Notes / Terms</div>
-                  <div className="paper-note-text">{invoice.notes}</div>
-                </div>
-              )}
-            </div>
-
             <div className="paper-summary-block">
               <div className="paper-summary-row">
                 <span>Subtotal:</span>
@@ -285,6 +269,22 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
                   {formatCurrency(totals.total, invoice.currency)}
                 </span>
               </div>
+            </div>
+
+            <div className="paper-notes-block">
+              {invoice.paymentInstructions && (
+                <div>
+                  <div className="paper-note-section-title">Payment Instructions</div>
+                  <div className="paper-note-text">{invoice.paymentInstructions}</div>
+                </div>
+              )}
+
+              {invoice.notes && (
+                <div>
+                  <div className="paper-note-section-title">Notes / Terms</div>
+                  <div className="paper-note-text">{invoice.notes}</div>
+                </div>
+              )}
             </div>
           </div>
 
