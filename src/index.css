@@ -1144,6 +1144,7 @@ button {
   .invoice-paper-wrapper {
     overflow-x: auto;
   }
+  .editor-column,
   .preview-column {
     min-width: 0;
   }

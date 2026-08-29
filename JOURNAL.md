@@ -22,3 +22,5 @@ Phase 7: During testing, I noticed that the template options were based on job d
 
 Phase 8: During testing, I identified several issues with the invoice layout and mobile experience. I fixed the PDF padding so it matches the invoice preview, improved the responsiveness of the web app on mobile, and kept the invoice preview in its original document format for consistent PDF output.
 I also removed the unnecessary website information from the business details, improved the spacing and alignment between the Billed To and Payment Due sections, and removed the duplicate Print/PDF button from the invoice preview while keeping it in the navbar.
+
+Phase 9: After the initial responsiveness update, I tested the web app again and found that some elements were still extending beyond the mobile screen. I made further adjustments to the web app layout to ensure the interface fits properly on smaller screens.
