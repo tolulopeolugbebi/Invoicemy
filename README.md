@@ -36,6 +36,7 @@ Creating a simple invoice can sometimes require complicated accounting software 
 • Automatic invoice calculations
 • Multiple currency options
 • Live invoice preview
+• Print / PDF generation
 • Responsive design
 
 ## Development Decisions

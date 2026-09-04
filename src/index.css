@@ -1263,6 +1263,64 @@ button {
     print-color-adjust: exact !important;
   }
 
+  /* Hide automatic footer in print */
+  .paper-footer {
+    display: none !important;
+  }
+
+  /* Reduce padding on invoice paper to fit one A4 page */
+  .invoice-paper {
+    padding: 1.5rem !important;
+  }
+
+  /* Reduce vertical spacing between sections for tighter print layout */
+  .paper-header {
+    margin-bottom: 1rem !important;
+  }
+
+  .paper-parties {
+    padding: 0.75rem 0 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .paper-items-table {
+    margin-bottom: 1rem !important;
+  }
+
+  .paper-bottom-grid {
+    gap: 0.75rem !important;
+    padding-top: 0.5rem !important;
+  }
+
+  /* Keep summary block together - never split totals across pages */
+  .paper-summary-block {
+    page-break-inside: avoid;
+  }
+
+  /* Keep important sections together as units */
+  .paper-header,
+  .paper-parties,
+  .paper-notes-block {
+    page-break-inside: avoid;
+  }
+
+  /* Allow items table to break across pages if needed, but keep rows intact */
+  .paper-items-table {
+    page-break-inside: auto;
+  }
+
+  .paper-items-table tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* Table readability - wrap long descriptions */
+  .paper-items-table td:first-child {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
   @page {
     size: A4 portrait;
     margin: 0;

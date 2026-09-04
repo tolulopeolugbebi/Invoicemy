@@ -261,10 +261,7 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
             </div>
           </div>
 
-          {/* Paper Footer */}
-          <div className="paper-footer">
-            Thank you for your business! Generated with Invoicemy.
-          </div>
+
         </div>
       </div>
     </div>
