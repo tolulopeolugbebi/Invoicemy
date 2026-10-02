@@ -1135,6 +1135,10 @@ button {
   .nav-actions {
     justify-content: space-between;
   }
+  .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
   .form-grid, .form-grid-3, .form-grid-4 {
     grid-template-columns: 1fr;
   }
